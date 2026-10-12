@@ -218,3 +218,51 @@ Open `http://localhost:5173` in your browser to inspect tools, resource `facilit
 
 ## 20. Conclusion
 The **Facility Intelligence MCP Server** demonstrates how the Model Context Protocol enables AI agents to serve as powerful, safe, human-in-the-loop energy intelligence assistants.
+
+## System Architecture
+
+The Facility Intelligence MCP Server connects AI assistants to facility analysis tools and structured JSON data using the Model Context Protocol (MCP).
+
+### Architecture Flow
+
+    User
+      |
+      v
+    AI Assistant (Claude Desktop / VS Code Copilot)
+      |
+      v
+    MCP Protocol
+      |
+      v
+    Facility Intelligence MCP Server
+      |
+      +-- get_facility_status()
+      +-- analyze_energy_usage()
+      +-- detect_anomalies()
+      +-- get_equipment_health()
+      +-- prioritize_maintenance()
+      +-- simulate_action()
+      |
+      v
+    Python Analysis Services
+      |
+      v
+    JSON Data (Energy, Equipment, Sensors, Maintenance)
+      |
+      v
+    Structured Results and Recommendations
+
+### Workflow
+
+1. The user asks a facility-related question.
+2. The AI assistant selects an appropriate MCP tool.
+3. The MCP server executes the corresponding Python function.
+4. The function analyzes the sample JSON data.
+5. The server returns structured results to the AI assistant.
+6. The AI assistant explains the findings and recommendations.
+
+### Safety
+
+The simulation tool estimates the potential impact of proposed changes. It does not directly control physical equipment.
+
+For detailed documentation, see [docs/architecture.md](docs/architecture.md).
